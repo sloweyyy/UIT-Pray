@@ -1,13 +1,16 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 import Input from "./Input";
 
 const Form: FunctionComponent = () => {
+  const [showSmoke, setShowSmoke] = useState(false);
+
   const handleClick = () => {
-    alert("Không học thì khấn cũng không được đâu nha!");
+    alert("Thắp hương thành công");
   };
 
+
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full relative">
       <Input placeholder="MSSV" />
       <Input placeholder="Nội dung bạn muốn khấn" className="h-50px" />
       <button

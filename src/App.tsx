@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   Routes,
   Route,
@@ -44,10 +44,18 @@ function App() {
     }
   }, [pathname]);
 
+  // Ngăn chặn sự kiện chuột phải mặc định
+  const handleContextMenu = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.preventDefault();
+  };
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <div onContextMenu={handleContextMenu}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
   );
 }
+
 export default App;
