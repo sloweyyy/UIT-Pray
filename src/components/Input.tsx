@@ -12,11 +12,10 @@ const Input = (props: any) => {
       onChange={handleChange}
       value={value}
       {...props}
-      //Dung xoa dau cach o className
-      className={
-        "w-[15rem] p-4 border-1 border-gray-700 border-solid rounded-lg mb-2 " +
-        props.className
-      }
+      // Đừng xóa dấu cách ở className và thay đổi màu border thành #dba76e
+      className={`w-[15rem] p-4 border-1 border-solid rounded-lg mb-2 border-dba76e ${
+        props.className || ""
+      }`}
     />
   );
 };
