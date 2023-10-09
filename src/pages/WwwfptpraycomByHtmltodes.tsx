@@ -1,9 +1,6 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 
 const WwwfptpraycomByHtmltodes: FunctionComponent = () => {
-  const [mail, setMail] = useState("");
-  const [content, setContent] = useState("");
-
   return (
     <div className="relative bg-www-fptpray-com-1920x859-default-nero w-full flex flex-col items-start justify-start min-h-[911px] text-left text-base text-www-fptpray-com-1920x859-default-boulder font-www-fptpray-com-1920x859-default-roboto-regular-16">
       <div className="self-stretch flex flex-col items-start justify-start pt-0 pb-[7.589996337890625px] pr-[1620px] pl-0 relative">
@@ -33,13 +30,7 @@ const WwwfptpraycomByHtmltodes: FunctionComponent = () => {
                 <div className="w-[314px] flex flex-col items-start justify-start gap-[10px]">
                   <div className="self-stretch rounded bg-www-fptpray-com-1920x859-default-nero flex flex-col items-start justify-start pt-2 px-[13px] pb-[7.8600006103515625px] border-[1px] border-solid border-www-fptpray-com-1920x859-default-silver">
                     <div className="w-72 h-[19px] overflow-hidden shrink-0 flex flex-col items-start justify-start py-0 pr-[184px] pl-0 box-border">
-                      <input
-                        className="w-full"
-                        type="text"
-                        onChange={(e) => setMail(e.target.value)}
-                        value={mail}
-                        placeholder="Mail"
-                      />
+                      <div className="relative">Mail của bạn...</div>
                     </div>
                   </div>
                   <div className="self-stretch rounded bg-www-fptpray-com-1920x859-default-nero box-border overflow-hidden flex flex-col items-start justify-start pt-[5px] pb-[80.63999938964844px] pr-[142px] pl-[13px] min-h-[39.599998474121094px] border-[1px] border-solid border-www-fptpray-com-1920x859-default-silver">

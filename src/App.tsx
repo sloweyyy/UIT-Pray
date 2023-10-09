@@ -6,7 +6,6 @@ import {
   useLocation,
 } from "react-router-dom";
 import WwwfptpraycomByHtmltodes from "./pages/WwwfptpraycomByHtmltodes";
-import Home from "./pages/Home";
 
 function App() {
   const action = useNavigationType();
@@ -47,7 +46,6 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<WwwfptpraycomByHtmltodes />} />
-      <Route path="/test" element={<Home />} />
     </Routes>
   );
 }
