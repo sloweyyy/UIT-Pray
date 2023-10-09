@@ -8,7 +8,7 @@ const Form: FunctionComponent = () => {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <Input placeholder="Mail" />
+      <Input placeholder="MSSV" />
       <Input placeholder="Nội dung bạn muốn khấn" className="h-50px" />
       <button
         onClick={handleClick}
