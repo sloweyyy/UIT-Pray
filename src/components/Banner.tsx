@@ -6,7 +6,7 @@ const Banner: FunctionComponent = () => {
       <img
         className="h-auto max-w-full w-[20rem] md:w-[30rem] "
         alt="banner"
-        src="https://i.imgur.com/9Yi8hfh.png"
+        src="https://i.imgur.com/kQ9voKw.png"
       />
     </div>
   );
