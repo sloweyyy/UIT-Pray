@@ -46,8 +46,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<WwwfptpraycomByHtmltodes />} />
-      <Route path="/test" element={<Home />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }
