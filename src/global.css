@@ -6,6 +6,8 @@ body {
     @apply leading-[normal] m-0;
     background-color: #fee6ac;
     /* Đặt màu nền thành #fee6ac */
+    margin-top: -50px;
+    /* Đặt margin-top thành 0 để loại bỏ khoảng trống phía trên cùng */
 }
 
 *,
@@ -21,8 +23,7 @@ body {
 }
 
 .github-icon {
-    position: fixed;
-    bottom: 10px;
+    bottom: 0px;
     /* Cách nút "Thắp Hương" 20px bằng cách sử dụng margin */
     margin-top: 20px;
 }

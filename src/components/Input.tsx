@@ -13,7 +13,7 @@ const Input = (props: any) => {
       value={value}
       {...props}
       // Đừng xóa dấu cách ở className và thay đổi màu border thành #dba76e
-      className={`w-[15rem] p-4 border-1 border-solid rounded-lg mb-2 border-dba76e margin-top-20 ${
+      className={`w-[15rem] p-4 border-1 border-solid rounded-lg mb-2 border-dba76e margin-top-5 ${
         props.className || ""
       }`}
     />
