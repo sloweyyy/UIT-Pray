@@ -11,8 +11,12 @@ const Input = (props: any) => {
     <input
       onChange={handleChange}
       value={value}
-      className="w-[10%] p-4 border-1 border-orange-500 border-solid rounded-lg mb-2"
       {...props}
+      //Dung xoa dau cach o className
+      className={
+        "w-[15rem] p-4 border-1 border-gray-700 border-solid rounded-lg mb-2 " +
+        props.className
+      }
     />
   );
 };

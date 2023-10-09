@@ -5,7 +5,7 @@ import Form from "../components/Form";
 
 const Home: FunctionComponent = () => {
   return (
-    <div className="flex items-center w-full flex-col">
+    <div className="flex items-center w-full flex-col py-8">
       <Banner />
       <Divider />
       <Form />
