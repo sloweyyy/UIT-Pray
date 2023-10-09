@@ -19,3 +19,10 @@ body {
 ::after {
     border-width: 0;
 }
+
+.github-icon {
+    position: fixed;
+    bottom: 10px;
+    /* Cố định ở dưới cùng cách bottom 10px */
+    /* Điều chỉnh vị trí từ cạnh phải */
+}

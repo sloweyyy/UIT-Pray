@@ -5,7 +5,6 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import WwwfptpraycomByHtmltodes from "./pages/WwwfptpraycomByHtmltodes";
 import Home from "./pages/Home";
 
 function App() {
@@ -44,7 +43,6 @@ function App() {
     }
   }, [pathname]);
 
-  // Ngăn chặn sự kiện chuột phải mặc định
   const handleContextMenu = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault();
   };

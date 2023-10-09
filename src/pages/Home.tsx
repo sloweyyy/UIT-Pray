@@ -2,6 +2,7 @@ import { FunctionComponent } from "react";
 import Banner from "../components/Banner";
 import Divider from "../components/Divider";
 import Form from "../components/Form";
+import GitHubIcon from "../components/Contact"; // Thay đổi đường dẫn tới tệp GitHubIcon.tsx
 
 const Home: FunctionComponent = () => {
   return (
@@ -9,6 +10,7 @@ const Home: FunctionComponent = () => {
       <Banner />
       <Divider />
       <Form />
+      <GitHubIcon />
     </div>
   );
 };
