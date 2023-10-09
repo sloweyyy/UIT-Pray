@@ -23,6 +23,6 @@ body {
 .github-icon {
     position: fixed;
     bottom: 10px;
-    /* Cố định ở dưới cùng cách bottom 10px */
-    /* Điều chỉnh vị trí từ cạnh phải */
+    /* Cách nút "Thắp Hương" 20px bằng cách sử dụng margin */
+    margin-top: 20px;
 }
