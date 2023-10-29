@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   Routes,
   Route,
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import WwwfptpraycomByHtmltodes from "./pages/WwwfptpraycomByHtmltodes";
+import Home from "./pages/Home";
 
 function App() {
   const action = useNavigationType();
@@ -43,10 +43,17 @@ function App() {
     }
   }, [pathname]);
 
+  const handleContextMenu = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.preventDefault();
+  };
+
   return (
-    <Routes>
-      <Route path="/" element={<WwwfptpraycomByHtmltodes />} />
-    </Routes>
+    <div onContextMenu={handleContextMenu}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
   );
 }
+
 export default App;
