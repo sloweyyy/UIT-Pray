@@ -27,3 +27,49 @@ body {
     bottom: 0px;
     margin-top: 20px;
 }
+
+@keyframes fadeInZoomIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.incense-stick {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 100px;
+    /* Adjust based on your image size */
+    height: auto;
+    /* Maintain aspect ratio */
+    z-index: 20;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    /* Transition for fade out */
+}
+
+.visible {
+    animation: fadeInZoomIn 1s ease-in-out forwards;
+    /* Animation for fade in and zoom in */
+}
+
+.hidden {
+    animation: fadeOutZoomOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeOutZoomOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}

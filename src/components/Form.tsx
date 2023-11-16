@@ -1,13 +1,19 @@
-import React, { FunctionComponent, useState } from "react";
-import Input from "./Input";
+import React, { useState } from 'react';
+import Input from './Input'; // Assuming you have an Input component
 
-const Form: FunctionComponent = () => {
-  const [showSmoke, setShowSmoke] = useState(false);
-
-  const handleClick = () => {
-    alert("Thắp hương thành công");
-  };
-
+const Form = () => {
+    const [showIncense, setShowIncense] = useState(false);
+    const [animateOut, setAnimateOut] = useState(false);
+  
+    const handleClick = () => {
+      setShowIncense(true);
+      setAnimateOut(false);
+      setTimeout(() => {
+        setAnimateOut(true);
+        setTimeout(() => setShowIncense(false), 1000); // Wait for animation to complete
+      }, 5000); // Duration before starting fade out
+    };
+  
 
   return (
     <div className="flex flex-col items-center w-full relative">
@@ -19,6 +25,17 @@ const Form: FunctionComponent = () => {
       >
         Thắp Hương
       </button>
+
+      {showIncense && (
+        <>
+          <div className={`overlay ${showIncense ? 'visible' : 'hidden'}`}></div>
+          <img 
+            src="../assets/incense_stick.png" // Update with the correct path
+            className={`incense-stick ${animateOut ? 'hidden' : 'visible'}`}
+            alt="Incense Stick"
+          />
+        </>
+      )}
     </div>
   );
 };
