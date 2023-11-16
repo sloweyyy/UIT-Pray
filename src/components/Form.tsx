@@ -12,6 +12,9 @@ const Form = () => {
         setAnimateOut(true);
         setTimeout(() => setShowIncense(false), 0);
       }, 5000);
+      setTimeout(() => { 
+        alert('Không thành đâu, đừng có mơ!'); }
+        , 6000);
     };
   
     return (
