@@ -31,7 +31,6 @@ const Form = () => {
 
         setTimeout(() => {
             alert("Không thành đâu, đừng có mơ!");
-            audio?.pause();
         }, 6000);
         
     };
