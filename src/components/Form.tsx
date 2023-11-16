@@ -1,40 +1,57 @@
-import React, { useState } from 'react';
-import Input from './Input';
+import React, { useState, useEffect } from "react";
+import Input from "./Input";
 
 const Form = () => {
     const [showIncense, setShowIncense] = useState(false);
     const [animateOut, setAnimateOut] = useState(false);
-    const [mssv, setMssv] = useState('');
-    const [prayer, setPrayer] = useState('');
+    const [mssv, setMssv] = useState("");
+    const [prayer, setPrayer] = useState("");
+    const [audio, setAudio] = useState<HTMLAudioElement | null>(null); // Specify the type here
+
+    useEffect(() => {
+        // Create audio element and store it in the state
+        const audioElement = new Audio("/UITPray.mp3"); // Replace with your audio file path
+        setAudio(audioElement);
+    }, []);
 
     const handleClick = () => {
         setShowIncense(true);
         setAnimateOut(false);
+
+        // Play audio if it is loaded
+        audio?.play(); // Use optional chaining here
         setTimeout(() => {
             setAnimateOut(true);
             setTimeout(() => {
                 setShowIncense(false);
-                setMssv('');
-                setPrayer('');
+                setMssv("");
+                setPrayer("");
             }, 0);
         }, 5000);
-        setTimeout(() => { 
-            alert('Không thành đâu, đừng có mơ!'); 
+
+        setTimeout(() => {
+            alert("Không thành đâu, đừng có mơ!");
+            audio?.pause();
         }, 6000);
+        
     };
 
     return (
         <div className="flex flex-col items-center w-full relative">
-            <Input 
+            <Input
                 placeholder="MSSV"
                 value={mssv}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMssv(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setMssv(e.target.value)
+                }
             />
-            <Input 
+            <Input
                 placeholder="Nội dung bạn muốn khấn"
                 className="h-50px"
                 value={prayer}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPrayer(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setPrayer(e.target.value)
+                }
             />
             <button
                 onClick={handleClick}
@@ -45,10 +62,16 @@ const Form = () => {
 
             {showIncense && (
                 <>
-                    <div className={`overlay ${showIncense ? 'visible' : 'hidden'}`}></div>
-                    <img 
-                        src="https://i.imgur.com/RIPG0ym.gif" 
-                        className={`incense-stick ${animateOut ? 'hidden' : 'visible'}`}
+                    <div
+                        className={`overlay ${
+                            showIncense ? "visible" : "hidden"
+                        }`}
+                    ></div>
+                    <img
+                        src="https://i.imgur.com/RIPG0ym.gif"
+                        className={`incense-stick ${
+                            animateOut ? "hidden" : "visible"
+                        }`}
                         alt="Incense Stick"
                         style={{ zIndex: 20 }}
                     />
