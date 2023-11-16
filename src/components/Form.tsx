@@ -30,7 +30,7 @@ const Form = () => {
         <>
           <div className={`overlay ${showIncense ? 'visible' : 'hidden'}`}></div>
           <img 
-            src="../assets/incense_stick.png" // Update with the correct path
+            src="/incense_stick.png" // Update with the correct path
             className={`incense-stick ${animateOut ? 'hidden' : 'visible'}`}
             alt="Incense Stick"
           />
